@@ -1,0 +1,215 @@
+\documentclass[10pt]{article}
+\input{style/coursHeadings}
+\input{style/programHeadings}
+\input{style/macros_SII}
+\input{style/macros_Titres}
+\input{style/macros_Frames}
+
+%Si le boolen xp est vrai : compilation pour xabi
+%Sinon compilation Damien
+
+\newif\ifprof
+%\proftrue
+\proffalse
+
+\newif\ifxp
+\xptrue
+%\xpfalse
+
+\newif\iftd
+\tdtrue
+%\tdfalse
+
+
+\usepackage[%
+    pdftitle={},
+    pdfauthor={Xavier Pessoles},
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=magenta]{hyperref}
+
+
+\def\discipline{Sciences Industrielles de l'Ingénieur}
+\def\xxtitre{%
+\ifxp
+3 \& 4 -- Étude Cinématique et Statique des systèmes de solides de la chaîne d'énergie
+Analyse, Modélisation, Résolution
+\else
+\fi
+}
+
+\def\xxsoustitre{%
+\ifxp
+Chapitre 1 -- Notions de base 
+\else
+\fi}
+
+\def\xxauteur{%
+\ifxp
+Xavier \textsc{Pessoles}
+\else
+\fi}
+
+\def\xxpied{%
+\ifxp
+3\&4 : Cinématique et Statique\\
+Ch. 1 : Notions de base -- Applications
+\else
+\fi}
+
+\def\xxpied{%
+\ifxp
+2013 -- 2014 \\
+Xavier \textsc{Pessoles}
+\else
+\fi}
+
+
+
+
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+\ifxp
+\input{style/enteteXP}
+\else
+\input{style/enteteDI}
+\fi
+
+
+\subsection*{Exercice 1 -- Calculs de moments}
+
+\begin{minipage}[c]{.68\linewidth}
+\subparagraph*{}
+\textit{Calculer $\vect{\mathcal{M}\left(A,\vect{F}\right)}$ en utilisant une méthode <<intuitive>> puis en utilisant la définition du moment.}
+\end{minipage}\hfill
+\begin{minipage}[c]{.3\linewidth}
+\begin{center}
+\includegraphics[width=\textwidth]{images/moment1}
+\end{center}
+\end{minipage}
+
+
+
+\begin{minipage}[c]{.68\linewidth}
+\subparagraph*{}
+\textit{Calculer $\vect{\mathcal{M}\left(O,\vect{F}\right)}$ en utilisant une méthode <<intuitive>> puis en utilisant la définition du moment.}
+\end{minipage}\hfill
+\begin{minipage}[c]{.3\linewidth}
+\begin{center}
+\includegraphics[width=\textwidth]{images/moment5}
+\end{center}
+\end{minipage}
+
+\begin{minipage}[c]{.68\linewidth}
+\subparagraph*{}
+\textit{Calculer $\vect{\mathcal{M}\left(O,\vect{F}\right)}$ en utilisant une méthode <<intuitive>> puis en utilisant la définition du moment.}
+
+\end{minipage}\hfill
+\begin{minipage}[c]{.3\linewidth}
+\begin{center}
+\includegraphics[width=\textwidth]{images/moment6}
+\end{center}
+\end{minipage}
+
+
+\subsubsection*{Exercice 2 : Application du PFS}
+
+\begin{minipage}[c]{.5\linewidth}
+La balance romaine représentée ci-dessus est constituée d'un contrepoids 3 coulissant le long de la tige 2 (graduée).
+\subparagraph*{}
+\textit{Déterminer la masse de l'objet pesé sur le crochet 4.}
+
+\subparagraph*{}
+\textit{Déterminer la force extérieure sur 1 permettant de maintenir le système à l'équilibre.}
+
+\end{minipage}\hfill
+\begin{minipage}[c]{.48\linewidth}
+\begin{center}
+\includegraphics[width=\textwidth]{images/balance}
+\end{center}
+\end{minipage}
+
+
+
+\begin{minipage}[c]{.5\linewidth}
+Une échelle d’incendie (3), partiellement représentée figure ci-dessous, est articulée en A (pivot d'axe $(A,\vect{z})$) sur une tourelle (2). La tourelle peut pivoter (rotation d'axe $(D,\vect{y})$) par rapport au châssis du camion (1). Le levage est réalisé par un vérin hydraulique 4 + 5 (4 = tige, 5 = corps) articulé en B sur l'échelle et en C sur la tourelle, les liaisons en B et C sont des liaisons rotules de centres B et C.
+L'étude est réalisée dans le plan de symétrie du dispositif, l'ensemble est en équilibre, la tourelle est à l'arrêt et le vérin est bloqué en position. ($\vect{P_3}$)($5\,000\;daN$) schématise le poids de l'échelle, le poids du vérin est négligé.
+
+On note $\vect{AB}=x_1 \vect{x} + y_1 \vect{y}$ et $\vect{AC}=x_Z \vect{x} + y_Z \vect{y}$.
+
+\subparagraph*{}
+\textit{Déterminer les actions mécaniques en A, B et C. Les calculs seront faits sous forme littérale.}
+
+
+\end{minipage}\hfill
+\begin{minipage}[c]{.48\linewidth}
+\begin{center}
+\includegraphics[width=\textwidth]{images/echelle}
+\end{center}
+\end{minipage}
+
+
+\vspace{.5cm}
+
+La route est horizontale et toutes les actions exercées entre les roues et le sol sont considérées comme des ponctuelles. Le poids de la voiture est de 1 500 daN et celui de la remorque est de 800daN. 
+
+
+On note $\vect{AG_1}=x_1 \vect{x} + y_1 \vect{y}$, 
+$\vect{AB}=x_2 \vect{x}$, 
+$\vect{AC}=x_3 \vect{x} + y_3 \vect{y}$,
+$\vect{AG_2}=x_4 \vect{x} + y_4 \vect{y}$,
+$\vect{AD}=x_5 \vect{x}$.
+
+\subparagraph*{}
+\textit{Déterminer les actions mécaniques en A, B C et D. Tous les calculs seront faits sous forme littérale.}
+
+\begin{center}
+\includegraphics[width=\textwidth]{images/remorque}
+\end{center}
+
+\subsection*{Exercice 3 -- Cinématique plane}
+
+On donne :
+\begin{itemize}
+\item $\omega(3/0) = 1\, 500 tr/min$;
+\item $CD = 5\, mm$;
+\item échelle : 1cm pour 0,2 m/s.
+\end{itemize}
+
+\begin{minipage}[c]{.48\linewidth}
+\begin{center}
+\includegraphics[width=\textwidth]{images/schema}
+\end{center}
+\end{minipage} \hfill
+\begin{minipage}[c]{.48\linewidth}
+\begin{center}
+\includegraphics[width=\textwidth]{images/schema}
+\end{center}
+\end{minipage}
+
+\subparagraph*{Utilisation du CIR}
+
+\textit{En justifiant, déterminer : 
+\begin{enumerate}
+\item $\vectv{C}{3}{0}$;
+\item $\vectv{B}{2}{0}$;
+\item $||\vectv{B}{2}{0}||$;
+\item $||\vectv{E}{2}{0}||$.
+\end{enumerate}}
+
+
+\subparagraph*{Utilisation de l'équiprojectivité}
+
+
+\textit{En justifiant, déterminer : 
+\begin{enumerate}
+\item $\vectv{C}{3}{0}$;
+\item $\vectv{B}{2}{0}$;
+\item $||\vectv{B}{2}{0}||$;
+\item $||\vectv{E}{2}{0}||$.
+\end{enumerate}}
+\end{document}
+
+
