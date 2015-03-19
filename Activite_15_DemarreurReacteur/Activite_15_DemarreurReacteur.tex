@@ -1,0 +1,165 @@
+\documentclass[10pt]{article}
+\input{style/coursHeadings}
+\input{style/programHeadings}
+\input{style/macros_SII}
+\input{style/macros_Titres}
+\input{style/macros_Frames}
+
+%Si le boolen xp est vrai : compilation pour xabi
+%Sinon compilation Damien
+
+\newif\ifprof
+%\proftrue
+\proffalse
+
+\newif\ifxp
+\xptrue
+%\xpfalse
+
+\newif\iftd
+\tdtrue
+%\tdfalse
+
+
+\usepackage[%
+    pdftitle={},
+    pdfauthor={Xavier Pessoles},
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=magenta]{hyperref}
+
+
+\def\discipline{Sciences Industrielles de l'Ingénieur}
+\def\xxtitre{%
+\ifxp
+7 : Étude des systèmes mécaniques -- Analyser
+\else
+\fi
+}
+
+\def\xxsoustitre{%
+\ifxp
+%Chapitre 1 -- Notions de base 
+\else
+\fi}
+
+\def\xxauteur{%
+\ifxp
+Xavier \textsc{Pessoles}
+\else
+\fi}
+
+\def\xxpied{%
+\ifxp
+7 : Étude des systèmes mécaniques -- Analyser \\
+Démarreur de réacteur
+\else
+\fi}
+
+
+
+
+
+
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+\input{style/enteteXP}
+
+
+\section*{Démarreur de réacteur}
+
+Le turbomoteur de réacteur a été conçu pour permettre la mise en route des réacteurs des avions à partir du poste de pilotage, sans que soit nécessaire l'utilisation de dispositifs d'assistance au sol. 
+
+Il est essentiellement constitué :
+\begin{itemize}
+\item d'une turbine à gaz, appelée générateur de gaz, équipée d'un moteur électrique de lancement;
+\item d'une turbine de puissance et d'un réducteur de vitesse appelés démarreur,
+\item des accessoires nécessaires à sa mise en \oe{}uvre et à son contrôle. 
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=.65\textwidth]{images/fig1}
+\end{center}
+
+Il permet d'amener le réacteur à une vitesse telle que l'allumage soit possible puis d'accompagner la mise en route jusqu'à une vitesse correspondant à un coule moteur sensiblement supérieur aux couples résistants. 
+
+Lorsque le réacteur atteint sa vitesse d'autonomie, l'alimentation en combustible est coupée et le démarreur se trouve automatiquement désaccouplé du réacteur. 
+
+Le démarreur, objet de l'étude est représenté en plan d'ensemble. Il est essentiellement composé d'une turbine à grande vitesse à deux roues \textbf{57} et \textbf{62} alimentée en $E$ par les gaz fournis par la turbine du générateur de gaz, d'un ensemble réducteur et d'une roue libre à galets débrayage automatiquement qui entraîne l'arbre de réacteur $S$.
+On s'intéresse au fonctionnement d'une pompe à main.
+
+
+\section*{Travail demandé}
+
+\subsection*{Étude technologique et fonctionnelle}
+
+\subparagraph{}
+\textit{Donner la désignation normalisée et le rôle de la pièce \textbf{67}.}
+
+\subparagraph{}
+\textit{Que représente la pièce \textbf{68} ? Quelle est sa fonction ? Comment est-elle réalisée ?}
+
+\subparagraph{}
+\textit{Que représente la pièce \textbf{63} ? Quelle est sa fonction ?}
+
+\subparagraph{}
+\textit{Que représente la pièce \textbf{60}? Quelle est sa fonction ?}
+
+\subparagraph{}
+\textit{Que représente la pièce \textbf{61} ? Quelle est sa fonction ? Comment est-elle réalisée ?}
+
+
+\subparagraph{}
+\textit{Que représente la pièce \textbf{41} ? Quelle est sa fonction ? Comment assurer sa stabilité ?}
+
+\subparagraph{}
+\textit{Comment est assurée la lubrification du système d'engrenages ? Quel est le rôle des pièces \textbf{19} et \textbf{37} ?}
+
+\subparagraph{}
+\textit{Que représente la pièce \textbf{49} ? Quelle est sa fonction ? En quelle matière est-elle réalisée ?}
+
+\subparagraph{}
+\textit{Quelle est la fonction du dispositif \textbf{55} dont le détail est représenté à l'échelle 2 ? Comment est-elle réalisée ? Quel est le rôle des pièces \textbf{54} et \textbf{55c}. Quel est le rôle de l'encoche sur la pièce \textbf{51}.}
+
+\subparagraph{}
+\textit{Quels types de matériaux doit-on respectivement choisir pour les pièces \textbf{10}, \textbf{11} et \textbf{46} ?}
+
+\subparagraph{}
+\textit{Quel est la nature de la liaison entre la pièce \textbf{22} et l'ensemble des pièces liées au carter ? Quels sont les deux roulements qui la réalisent ? Comment est effectué l'arrêt axial ?}
+
+\subparagraph{}
+\textit{Quelle est la nature de la liaison entre \textbf{42} et \textbf{40} ? Comment est-elle réalisée ?}
+
+\subparagraph{}
+\textit{Le mécanisme comprend une roue libre. Quel est son rôle ? Identifier les pièces principales qui la constituent.}
+
+\subparagraph{}
+\textit{Quel est le rôle du système composé des pièce \textbf{71}, \textbf{72}, \textbf{73} ?}
+
+\subparagraph{}
+\textit{Quand le réacteur fonctionne en régime établi et que le turbomoteur de démarrage est arrêté, on souhaite que tout contact soit supprimé au niveau de la roue libre. Comment cela est-il réalisé ? Tracer le croquis d'un galet dans cette position.}
+
+\subparagraph{}
+\textit{Le système comprend deux capteurs de vitesse \textbf{4} et \textbf{56}. Quelles indications donnent-ils respectivement et pourquoi sont-ils nécessaires tous les 2 ?}
+
+
+\subsection*{Modélisation cinématique}
+
+\subparagraph{}
+\textit{Établir le schéma cinématique minimal du démarreur. }
+
+
+\subparagraph{}
+\textit{Paramétrer le mécanisme et calculer le rapport de réduction du train d'engrenage en fonction du diamètre des roues. }
+
+\subsection*{Représentation graphique}
+
+\subparagraph{}
+\textit{Réaliser, à main levée, le croquis de l'écrou \textbf{59}.}
+
+
+\end{document}
+
+
